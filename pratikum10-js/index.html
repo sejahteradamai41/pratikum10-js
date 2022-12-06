@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabel{
+            display: flex;
+            justify-content: center;
+        }
+
+        table{
+            border: solid black;
+        }
+    </style>
+
+    <script>
+        function kalkulator(){
+            let inputan1 = document.getElementById("inputan").value;
+            let Mata_uang =document.getElementById("mata_uang").value;
+            console.log(inputan1 * Mata_uang);
+
+            let area_hasil = document.getElementById("hasil");
+            area_hasil.innerHTML = inputan1 * Mata_uang;
+        }
+    </script>
+</head>
+<body>
+    <div class="tabel">
+        <table style="width: 50%;">
+            <tr>
+                <td>Masukan Nilai</td>
+                <td>Mata Uang</td>
+                <td>Nilai Rupiah</td>
+            </tr>
+
+            <tr>
+                <td> <input type="number" onchange="kalkulator()" id="inputan"></td>
+                <td>
+                    <select id="mata_uang" onchange="kalkulator()">
+                        <option value="9915">Dollar US</option>
+                        <option value="13472">Dollar Singapur</option>
+                        <OPtion value="874">Ringgit Malaysia</OPtion>
+                        <option value="120">Yen Jepang</option>
+                        <option value="15888">Euro</option>
+                        <option value="3592">Riyal Arap Saudi</option>
+                    </select>
+                </td>
+                <td>
+                    <p id="hasil"></p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
